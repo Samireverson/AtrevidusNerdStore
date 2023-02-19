@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -80,6 +82,95 @@ aside, main {
 
 main {
     flex: 1;
+}
+
+.card-principal {
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    height: 480px;
+    width: 540px;
+    box-shadow: 0px 2px 26px rgba(0, 0, 0, 0.25);
+    border-radius: 26px 0 26px 0;
+    transition: all 1s ease-in-out;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(1, 26, 34, 0.89), rgba(1, 26, 34, 0.89));
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all 1s ease-in-out;
+}
+
+.descricao {
+    height: 0;
+    padding: 20px 50px 30px 50px;
+    background-color: #fff;
+    transition: all 1s ease-in-out;
+}
+
+.descricao h5 {
+    font-family: 'lato', monospace, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.descricao p {
+    font-family: 'lato', monospace, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #060606;
+}
+
+.corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 100px solid #189ab4;
+    border-right: 100px solid transparent;
+}
+
+.right-top-corner{
+    left: auto;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+.left-bottom-corner{
+    top: auto;
+    bottom: 0;
+    transform: rotate(-90deg);
+}
+
+.icon-top{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+.icon-bottom{
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+}
+
+.card-principal:hover{
+    box-shadow: 0 0 10px 1px #5ad8e8;
+}
+
+.card-principal:hover .titulo, .card-principal:hover .descricao{
+    height: 50%;
 }
 
 aside {
